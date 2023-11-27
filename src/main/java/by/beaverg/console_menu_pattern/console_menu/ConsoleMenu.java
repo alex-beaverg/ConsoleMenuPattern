@@ -35,7 +35,7 @@ public class ConsoleMenu {
         int answer;
         do {
             try {
-                answer = RequestMethods.requestingInfoWithChoice("Enter the menu item number: ", index - 1);
+                answer = RequestMethods.menuItemRequest("Enter the menu item number: ", index - 1);
                 break;
             } catch (EmptyInputException | MenuItemOutOfBoundsException e) {
                 LOGGER.error(e.getMessage());
@@ -50,11 +50,15 @@ public class ConsoleMenu {
         int answer = runAnyMenu("Main menu:", MainMenu.values());
         switch (answer) {
             case (1) -> {
-                PRINT2LN.info("Do something");
-                return runSecondaryMenu1();
+                PRINT2LN.info("Do something and stay in the Main Menu");
+                return runMainMenu();
             }
             case (2) -> {
-                PRINT2LN.info("Do something");
+                PRINT2LN.info("Do something and go to the Secondary Menu 1");
+                return runSecondaryMenu1();
+            }
+            case (3) -> {
+                PRINT2LN.info("Do something and go to the Secondary Menu 2");
                 return runSecondaryMenu2();
             }
             default -> {
@@ -67,14 +71,15 @@ public class ConsoleMenu {
         int answer = runAnyMenu("Secondary menu 1:", SecondaryMenu1.values());
         switch (answer) {
             case (1) -> {
-                PRINT2LN.info("Do something");
+                PRINT2LN.info("Do something and stay in the Secondary Menu 1");
                 return runSecondaryMenu1();
             }
             case (2) -> {
-                PRINT2LN.info("Do something");
+                PRINT2LN.info("Do something and go to the Main Menu");
                 return runMainMenu();
             }
             case (3) -> {
+                // Do nothing
                 return runMainMenu();
             }
             default -> {
@@ -87,14 +92,15 @@ public class ConsoleMenu {
         int answer = runAnyMenu("Secondary menu 2:", SecondaryMenu2.values());
         switch (answer) {
             case (1) -> {
-                PRINT2LN.info("Do something");
+                PRINT2LN.info("Do something and stay in the Secondary Menu 2");
                 return runSecondaryMenu2();
             }
             case (2) -> {
-                PRINT2LN.info("Do something");
+                PRINT2LN.info("Do something and go to the Main Menu");
                 return runMainMenu();
             }
             case (3) -> {
+                // Do nothing
                 return runMainMenu();
             }
             default -> {
