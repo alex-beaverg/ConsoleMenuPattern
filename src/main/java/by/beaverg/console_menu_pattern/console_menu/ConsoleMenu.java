@@ -1,11 +1,7 @@
 package by.beaverg.console_menu_pattern.console_menu;
 
-import by.beaverg.console_menu_pattern.console_menu.menu_enums.IMenu;
-import by.beaverg.console_menu_pattern.console_menu.menu_enums.MainMenu;
-import by.beaverg.console_menu_pattern.console_menu.menu_enums.SecondaryMenu1;
-import by.beaverg.console_menu_pattern.console_menu.menu_enums.SecondaryMenu2;
-import by.beaverg.console_menu_pattern.util.custom_exceptions.EmptyInputException;
-import by.beaverg.console_menu_pattern.util.custom_exceptions.MenuItemOutOfBoundsException;
+import by.beaverg.console_menu_pattern.console_menu.menu_enums.*;
+import by.beaverg.console_menu_pattern.util.custom_exceptions.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

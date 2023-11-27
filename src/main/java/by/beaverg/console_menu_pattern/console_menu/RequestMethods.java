@@ -2,8 +2,7 @@ package by.beaverg.console_menu_pattern.console_menu;
 
 import static by.beaverg.console_menu_pattern.util.Printers.*;
 
-import by.beaverg.console_menu_pattern.util.custom_exceptions.EmptyInputException;
-import by.beaverg.console_menu_pattern.util.custom_exceptions.MenuItemOutOfBoundsException;
+import by.beaverg.console_menu_pattern.util.custom_exceptions.*;
 
 import java.util.Scanner;
 
