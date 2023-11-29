@@ -21,7 +21,7 @@ public class ConsoleMenu {
         return null;
     }
 
-    private int runAnyMenu(String title, IMenu[] menuItems) {
+    private int drawAnyMenuAndChooseMenuItem(String title, IMenu[] menuItems) {
         int index = 1;
         PRINT2LN.info(title);
         for (IMenu item : menuItems) {
@@ -43,7 +43,7 @@ public class ConsoleMenu {
     }
 
     private ConsoleMenu runMainMenu() {
-        int answer = runAnyMenu("Main menu:", MainMenu.values());
+        int answer = drawAnyMenuAndChooseMenuItem("Main menu:", MainMenu.values());
         switch (answer) {
             case (1) -> {
                 PRINT2LN.info("Do something and stay in the Main Menu");
@@ -64,7 +64,7 @@ public class ConsoleMenu {
     }
 
     private ConsoleMenu runSecondaryMenu1() {
-        int answer = runAnyMenu("Secondary menu 1:", SecondaryMenu1.values());
+        int answer = drawAnyMenuAndChooseMenuItem("Secondary menu 1:", SecondaryMenu1.values());
         switch (answer) {
             case (1) -> {
                 PRINT2LN.info("Do something and stay in the Secondary Menu 1");
@@ -85,7 +85,7 @@ public class ConsoleMenu {
     }
 
     private ConsoleMenu runSecondaryMenu2() {
-        int answer = runAnyMenu("Secondary menu 2:", SecondaryMenu2.values());
+        int answer = drawAnyMenuAndChooseMenuItem("Secondary menu 2:", SecondaryMenu2.values());
         switch (answer) {
             case (1) -> {
                 PRINT2LN.info("Do something and stay in the Secondary Menu 2");
